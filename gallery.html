@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive gallery with lightbox and image upload support." />
+  <title>Gallery | Kevin Kiplagat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-gallery">
+  <div class="loading-screen" id="loadingScreen"><div class="loader-ring"></div><p>Loading portfolio...</p></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">AM<span>Portfolio</span></a>
+      <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero container reveal">
+      <p class="eyebrow">Gallery</p>
+      <h1>Moments, projects, and milestones</h1>
+    </section>
+
+    <section class="section container gallery-section">
+      <div class="gallery-upload reveal">
+        <label for="imageUpload" class="btn btn-secondary">Upload image</label>
+        <input type="file" id="imageUpload" accept="image/*" multiple hidden />
+        <p id="uploadStatus" class="upload-status" aria-live="polite"></p>
+      </div>
+      <div class="masonry-grid" id="galleryGrid">
+        <figure class="gallery-item reveal"><img src="assets/kevin1.jpeg" alt="Gallery item 1" /></figure>
+        <figure class="gallery-item reveal"><img src="assets/img1.jpg" alt="Gallery item 2" /></figure>
+        <figure class="gallery-item reveal"><img src="assets/img2.jpg" alt="Gallery item 3" /></figure>
+        <figure class="gallery-item reveal"><img src="assets/img3.jpg" alt="Gallery item 4" /></figure>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">×</button>
+    <img id="lightboxImage" src="" alt="Expanded gallery item" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© 2026 Kevin Kiplagat. All rights reserved.</p>
+      <div class="social-row"><a href="https://www.linkedin.com/in/Zee Tyre/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/zeetyre88-afk" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.instagram.com/zigshark4/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/Zee Tyre" target="_blank" rel="noopener noreferrer">Facebook</a></div>
+    </div>
+  </footer>
+  <a href="#top" class="back-to-top">↑</a>
+  <script src="script.js"></script>
+</body>
+</html>
